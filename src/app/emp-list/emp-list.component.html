@@ -1,0 +1,14 @@
+<h2>Employee List</h2>
+<ul *ngFor ="let emp of employees">
+  <li>{{emp.name}}-{{emp.gender}}</li>
+  
+</ul>
+<form>
+  <label>id:</label>
+  <input type="text" name="id" [(ngModel)]="id">
+  <label>name:</label>
+  <input type="text" name="name" [(ngModel)]="name">
+  <label>gender:</label>
+  <input type="text" name="gender" [(ngModel)]="gender">
+  <button (click)="postdata(id, name, gender)">Add Employee</button>
+</form>
